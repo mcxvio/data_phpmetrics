@@ -7,6 +7,11 @@ Includes dockerfile to run nginx in docker to show the reports (if desired).
 
 Checkout the repo and view the static repots or run with docker to serve via nginx.
 
+Start nginx in docker container:
+'''
+docker run --rm --name docker-nginx -p 8080:80 nginx
+'''
+
 ### Prerequisites
 
 Docker needs to be installed if you choose to run with the dockerfile.
