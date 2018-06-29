@@ -12,6 +12,6 @@ services:
         ports:
             - "8088:80"
         volumes:
-            # show report, i.e., </your/local/php/project/_metrics/>:/code
-            - ~/Sites/webforms/app/_metrics/:/code
+            # show report, i.e., </your/local/php/project/_metrics/>:/usr/share/nginx/html
+            - ~/Sites/webforms/app/_metrics/:/usr/share/nginx/html
             - ./site.conf:/etc/nginx/conf.d/default.conf
