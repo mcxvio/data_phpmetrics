@@ -1,23 +1,26 @@
 # phpmetrics Reports
 
-Repo to store output of phpmetrics tool for MVF products.
-Includes dockerfile to run nginx in docker to show the reports (if desired).
+Analyse PHP code by running phpmetrics against the code in a docker container and then view the results in another docker container.
 
 ## Getting Started
 
-Checkout the repo and view the static repots or run with docker to serve via nginx.
+Clone the repo, open docker-compose.yml and change (lines 7 & 16) to the file path of the code you want to analyse.
 
-Start nginx in docker container:
+Run docker compose:
 '''
-docker run --rm --name docker-nginx -p 8080:80 nginx
+docker-compose up
 '''
+
+Navigate to http://localhost:8088/ to view the report.
+(The reports will also be created locally on your hard drive, the container shows them via nginx.)
 
 ### Prerequisites
 
-Docker needs to be installed if you choose to run with the dockerfile.
+Docker needs to be installed.
+Some PHP code to analyse needs to be on your local machine.
 
 ## Built With
 
-* [phpmetrics](https://www.phpmetrics.org/) - A static analysis tool for PHP.
 * [docker](https://www.docker.com/) - The world's leading software containerisation platform.
+* [phpmetrics](https://www.phpmetrics.org/) - A static analysis tool for PHP.
 * [NGINX](https://www.nginx.com/) - High performance load balancer, web server and reverse proxy.
