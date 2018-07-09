@@ -18,6 +18,7 @@ Navigate to http://localhost:8088/ to view the report.
 
 - Docker needs to be installed.
 - Some PHP code to analyse needs to be on your local machine.
+- Note: dockerfile and site.conf file paths are configured for MacOSX, Linux.
 
 ## Built With
 
